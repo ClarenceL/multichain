@@ -228,6 +228,7 @@ Most of the functions that we have re-exported expected `*chaincfg.Params` as an
 1. Install Docker
 2. Install Docker Compose
 3. Run Docker
+4. Filecoin requires the submodule to be merged - `git submodule init && git submodule update`. This merges in `-777a6fbf4446b1112adfd4fa5dd88e0c88974122 chain/filecoin/filecoin-ffi`.
 4. Run `./test.sh`
 
 Example output:
