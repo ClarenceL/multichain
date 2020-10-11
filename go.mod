@@ -8,12 +8,14 @@ require (
 	github.com/centrifuge/go-substrate-rpc-client v1.1.0
 	github.com/codahale/blake2 v0.0.0-20150924215134-8d10d0420cbf
 	github.com/cosmos/cosmos-sdk v0.39.1
+	github.com/elastos/Elastos.ELA v0.6.0
 	github.com/ethereum/go-ethereum v1.9.20
 	github.com/filecoin-project/go-address v0.0.3
 	github.com/filecoin-project/go-jsonrpc v0.1.2-0.20200822201400-474f4fdccc52
 	github.com/filecoin-project/lotus v0.5.6
 	github.com/filecoin-project/specs-actors v0.9.3
 	github.com/ipfs/go-cid v0.0.7
+	github.com/itchyny/base58-go v0.0.5
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1
 	github.com/multiformats/go-varint v0.0.6
 	github.com/onsi/ginkgo v1.14.0
@@ -28,6 +30,9 @@ require (
 )
 
 replace github.com/cosmos/ledger-cosmos-go => github.com/terra-project/ledger-terra-go v0.11.1-terra
+
 replace github.com/CosmWasm/go-cosmwasm => github.com/terra-project/go-cosmwasm v0.10.1-terra
+
 replace github.com/filecoin-project/filecoin-ffi => ./chain/filecoin/filecoin-ffi
+
 replace github.com/keybase/go-keychain => github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4

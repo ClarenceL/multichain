@@ -7,15 +7,21 @@ RUN apt-get install --yes curl
 RUN curl https://download.elastos.org/elastos-ela/elastos-ela-v0.6.0/elastos-ela-v0.6.0-linux-x86_64.tgz | tar -xz
 RUN mv ./elastos-ela-v0.6.0/* /root
 
+RUN chmod +x /root/ela
 COPY config.json /root/
 COPY keystore.dat /root/
 COPY blockdata.tar.gz /root/
 RUN tar -xzf /root/blockdata.tar.gz -C /root/
+COPY run.sh /root/
+RUN chmod +x /root/run.sh
 
 # set workdir so that config.json is properly imported
 # don't run /root/ela, it can't find config.json
-WORKDIR /root
+# WORKDIR /root
 
 EXPOSE 20333-20338
 
-ENTRYPOINT ["/bin/sh", "-c", "./ela"]
+# Commenting this out to use a run.sh to conform to the standard in multichain
+# ENTRYPOINT ["/bin/sh", "-c", "./ela"]
+
+ENTRYPOINT ["./root/run.sh"]
